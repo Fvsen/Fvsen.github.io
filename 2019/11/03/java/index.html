@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客 | Hexo</title>
+  <title>java | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一章内容 第二章内容 第三章内容 参考文献www.github.com">
+  <meta name="description" content="1. 多进制下整型常量表示方法二进制：0b或0B 八进制：以0开头并且其后由0~7范围内的数字组成的数字序列 十六进制：以0x或0X开头，并且其后由0~9、A~F（字母不区分大小写）组成的的数字序列2. 引用数据类型类（class）、接口（interface）、枚举（enum）、注解（annotation）3. 变量定义long型的变量需要注意： 如果数值大小超过int的范围，则需要在数字末尾加上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="java">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;java&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一章内容 第二章内容 第三章内容 参考文献www.github.com">
+<meta property="og:description" content="1. 多进制下整型常量表示方法二进制：0b或0B 八进制：以0开头并且其后由0~7范围内的数字组成的数字序列 十六进制：以0x或0X开头，并且其后由0~9、A~F（字母不区分大小写）组成的的数字序列2. 引用数据类型类（class）、接口（interface）、枚举（enum）、注解（annotation）3. 变量定义long型的变量需要注意： 如果数值大小超过int的范围，则需要在数字末尾加上">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-02T09:51:29.423Z">
+<meta property="og:updated_time" content="2019-11-03T14:10:16.689Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -152,31 +152,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      java
     </h1>
   
 
         
-        <a href="/2019/11/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-02T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
+        <a href="/2019/11/03/java/" class="archive-article-date">
+  	<time datetime="2019-11-03T01:22:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>内容</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.github.com" target="_blank" rel="noopener">www.github.com</a></p>
+        <h2 id="1-多进制下整型常量表示方法"><a href="#1-多进制下整型常量表示方法" class="headerlink" title="1. 多进制下整型常量表示方法"></a>1. 多进制下整型常量表示方法</h2><pre><code>二进制：0b或0B
+八进制：以0开头并且其后由0~7范围内的数字组成的数字序列
+十六进制：以0x或0X开头，并且其后由0~9、A~F（字母不区分大小写）组成的的数字序列</code></pre><h2 id="2-引用数据类型"><a href="#2-引用数据类型" class="headerlink" title="2. 引用数据类型"></a>2. 引用数据类型</h2><pre><code>类（class）、接口（interface）、枚举（enum）、注解（annotation）</code></pre><h2 id="3-变量"><a href="#3-变量" class="headerlink" title="3. 变量"></a>3. 变量</h2><pre><code>定义long型的变量需要注意： 如果数值大小超过int的范围，则需要在数字末尾加上L，反之可不加。
 
+3.1 变量类型的转换
+
+1.自动类型转换: byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double
+                             ^
+                            char 
+    如箭头指向的方向可自动转换</code></pre><h2 id="4-位运算"><a href="#4-位运算" class="headerlink" title="4. 位运算"></a>4. 位运算</h2><pre><code>当两个二进制数进行运算时，原码的运算不够方便，因为在运算前需要判断两数的正负，所以通常使用反码进行运算，
+再对求得的反码进行取反即可得结果。
+正数 ： 原码 = 反码 = 补码
+负数 ： 反码 = 原码最高位不变，其余为取反
+       负数的补码 = 负数的补码 + 1 = 原码的最高位不变，其余位取反后加1
+
+移位运算： 
+    左移  &gt;&gt;  舍弃最高位，零补最低位        在移位运算中，通常将数补正位32位的二进制数，不足的用符号位填充
+    右移  &gt;&gt;  符号位不变，左边补上符号位，舍弃最低位        </code></pre>
       
 
       
@@ -255,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/03/java/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +282,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/03/java/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/04/Java%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java
+          Java集合
         
       </div>
     </a>
   
   
-    <a href="/2019/11/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/11/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
