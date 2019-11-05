@@ -15,10 +15,10 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1. ArrayList    ArrayList底层是用数组实现的，因此进行增删操作时会频繁的进行数组的创建，降低效率， 所以ArrayList不适合进行大量的增删操作。但是ArrayList由于数组的索引而便于查询。2. LinkedList集合    LinkList底层使用双向的循环链表实现，集合中的每一个元素都使用个引用的方式来记住它的前一个和 后一个元素，从而可以将所有的元素联系起来。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;04&#x2F;Java%E9%9B%86%E5%90%88&#x2F;source&#x2F;_posts&#x2F;iterator.png">
-<meta property="og:updated_time" content="2019-11-04T13:14:26.187Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Fvsen&#x2F;picture&#x2F;blob&#x2F;master&#x2F;iterator.jpg?raw=true">
+<meta property="og:updated_time" content="2019-11-05T14:21:01.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;04&#x2F;Java%E9%9B%86%E5%90%88&#x2F;source&#x2F;_posts&#x2F;iterator.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;Fvsen&#x2F;picture&#x2F;blob&#x2F;master&#x2F;iterator.jpg?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -189,8 +189,36 @@
 Collection接口和Map接口主要用于存储元素，Iterator主要用于遍历Collection元素。迭代器可以在迭代过程中
 删除元素，且不影响后续迭代进程。
     使用迭代器删除集合中的特定元素，这种方式与普通遍历方式来说不同之处在于
-迭代器迭代过程中删除元素的有点在于：不会产生集合元素个数改变而影响迭代进程。</code></pre><p><img src="source/_posts/iterator.png" alt="avatar"></p>
+迭代器迭代过程中删除元素的有点在于：不会产生集合元素个数改变而影响迭代进程。</code></pre><p><img src="https://github.com/Fvsen/picture/blob/master/iterator.jpg?raw=true" alt="avatar"></p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><pre><code>最终输出结果    [bbb, ccc, ddd, eee, fff]</code></pre><h2 id="4-foreach–增强循环"><a href="#4-foreach–增强循环" class="headerlink" title="4. foreach–增强循环"></a>4. foreach–增强循环</h2><pre><code>    foreach循环书写简单，但是具有一定的局限性，在使用foreach循环访问数组和集合时，只能访问集合中的元素，不能
+删改集合中的元素。</code></pre><h2 id="5-Set接口简介"><a href="#5-Set接口简介" class="headerlink" title="5. Set接口简介"></a>5. Set接口简介</h2><pre><code>    Set接口时Collection的一个子接口，它并没有在Collection的基础上增加新的方法，只是比Collection更加严格，
+Set接口中元素无序，并且会以某种方式保证存入的元素不出现重复。Set接口常用的实现类有HashSet和TreeSet。
 
+    其中HashSet根据对象的哈希值来确定元素在集合中的存储位置，因此具有良好的存取和查找性能。
+    TreeSet则以二叉树的方式存储元素，它可以实现对集合中的元素排序。</code></pre><h2 id="6-HashSet"><a href="#6-HashSet" class="headerlink" title="6. HashSet"></a>6. HashSet</h2><pre><code>    HashSet时Set的一个实现类，它所存储的元素是不可重复的，并且元素都是无序的。当向HashSet集合中添加一个对象时，
+首先会调用对象的hashCode()方法来计算对象的哈希值，从而确定元素的存储位置。如果此时哈希值相同，再调用对象的equals()
+方法来确保该该位置没有重复元素。
+
+    HashSet之所以能确保不出现重复元素，是因为它在存入元素时做了很多工作。当调用HashSet集合的add()方法存入元素时，
+首先调用存入对象的hashCode()方法获得对象的哈希值，然后根据对象的哈希值计算出一个存储位置。如果该位置上没有元素，
+则直接将元素存入，如果该位置上有元素存在，则会调用equals()方法让当前存入的元素依次和该位置上的元素进行比较。如果
+返回结果为false就将该元素存入集合，如果返回的结果为true则说明有重复元素，就将该元素舍弃。
+
+    基于上述特性可知，当向HashSet中存入元素时，为了保证其正常工作，要求在存入对象时重写Object类的hashCode()和
+equals()方法。</code></pre><h2 id="7-Map接口"><a href="#7-Map接口" class="headerlink" title="7. Map接口"></a>7. Map接口</h2><pre><code>            Map
+             |
+    |         |           |
+ HashTable HashMap   TreeMap
+     ^        ^
+     |         |
+     |           |
+Properties LinkedHashMap
+
+    HashMap存入的元素是无序的，如果想要迭代的顺序与存入的顺序一致，可以使用LinkedHashMap类，它是HashMap的子类，
+与LinkedList一致，也是使用双向链表来维护内部元素的关系。
+
+    HashTable是线程安全的类，由于其存取元素的速度很慢，目前已逐渐被HashMap取代。但是它的子类Properties集合在实际
+应用中非常重要。</code></pre>
       
 
       
