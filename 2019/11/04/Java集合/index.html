@@ -15,10 +15,10 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1. ArrayList    ArrayList底层是用数组实现的，因此进行增删操作时会频繁的进行数组的创建，降低效率， 所以ArrayList不适合进行大量的增删操作。但是ArrayList由于数组的索引而便于查询。2. LinkedList集合    LinkList底层使用双向的循环链表实现，集合中的每一个元素都使用个引用的方式来记住它的前一个和 后一个元素，从而可以将所有的元素联系起来。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;Fvsen&#x2F;picture&#x2F;blob&#x2F;master&#x2F;iterator.jpg?raw=true">
-<meta property="og:updated_time" content="2019-11-05T14:21:01.317Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Fvsen&#x2F;picture&#x2F;master&#x2F;iterator.jpg">
+<meta property="og:updated_time" content="2019-11-06T01:56:33.134Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;Fvsen&#x2F;picture&#x2F;blob&#x2F;master&#x2F;iterator.jpg?raw=true">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Fvsen&#x2F;picture&#x2F;master&#x2F;iterator.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -189,7 +189,7 @@
 Collection接口和Map接口主要用于存储元素，Iterator主要用于遍历Collection元素。迭代器可以在迭代过程中
 删除元素，且不影响后续迭代进程。
     使用迭代器删除集合中的特定元素，这种方式与普通遍历方式来说不同之处在于
-迭代器迭代过程中删除元素的有点在于：不会产生集合元素个数改变而影响迭代进程。</code></pre><p><img src="https://github.com/Fvsen/picture/blob/master/iterator.jpg?raw=true" alt="avatar"></p>
+迭代器迭代过程中删除元素的有点在于：不会产生集合元素个数改变而影响迭代进程。</code></pre><p><img src="https://raw.githubusercontent.com/Fvsen/picture/master/iterator.jpg" alt="avatar"></p>
 <h1 id=""><a href="#" class="headerlink" title=""></a></h1><pre><code>最终输出结果    [bbb, ccc, ddd, eee, fff]</code></pre><h2 id="4-foreach–增强循环"><a href="#4-foreach–增强循环" class="headerlink" title="4. foreach–增强循环"></a>4. foreach–增强循环</h2><pre><code>    foreach循环书写简单，但是具有一定的局限性，在使用foreach循环访问数组和集合时，只能访问集合中的元素，不能
 删改集合中的元素。</code></pre><h2 id="5-Set接口简介"><a href="#5-Set接口简介" class="headerlink" title="5. Set接口简介"></a>5. Set接口简介</h2><pre><code>    Set接口时Collection的一个子接口，它并没有在Collection的基础上增加新的方法，只是比Collection更加严格，
 Set接口中元素无序，并且会以某种方式保证存入的元素不出现重复。Set接口常用的实现类有HashSet和TreeSet。

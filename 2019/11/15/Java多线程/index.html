@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/11 | Hexo</title>
+  <title>Java多线程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+  <meta name="description" content="1. 线程的生命周期新建状态》》就绪状态》》运行状态》》死亡状态        》》阻塞状态2. 线程的阻塞状态1、 wait()  ---  需要使用notify()唤醒才能继续执行线程 2、 阻塞方法：阻塞式IO方法 3、 调用另一个线程的join()方法，只有当加入的线程执行完之后才会继续执行。3. 线程的死亡状态当线程调用stop()方法或run()方法执行完毕后，或者线程抛出一个未捕获的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java多线程">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Java%E5%A4%9A%E7%BA%BF%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. 线程的生命周期新建状态》》就绪状态》》运行状态》》死亡状态        》》阻塞状态2. 线程的阻塞状态1、 wait()  ---  需要使用notify()唤醒才能继续执行线程 2、 阻塞方法：阻塞式IO方法 3、 调用另一个线程的join()方法，只有当加入的线程执行完之后才会继续执行。3. 线程的死亡状态当线程调用stop()方法或run()方法执行完毕后，或者线程抛出一个未捕获的">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-17T14:46:43.676Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -149,292 +152,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java多线程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2019-11-27T12:19:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+    <h1 class="article-title" itemprop="name">
+      Java多线程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/15/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
+        
+        <a href="/2019/11/15/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2019-11-15T00:15:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/15/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">Java多线程</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-线程的生命周期"><a href="#1-线程的生命周期" class="headerlink" title="1. 线程的生命周期"></a>1. 线程的生命周期</h2><pre><code>新建状态》》就绪状态》》运行状态》》死亡状态        》》阻塞状态</code></pre><h2 id="2-线程的阻塞状态"><a href="#2-线程的阻塞状态" class="headerlink" title="2. 线程的阻塞状态"></a>2. 线程的阻塞状态</h2><pre><code>1、 wait()  ---  需要使用notify()唤醒才能继续执行线程
+2、 阻塞方法：阻塞式IO方法
+3、 调用另一个线程的join()方法，只有当加入的线程执行完之后才会继续执行。</code></pre><h2 id="3-线程的死亡状态"><a href="#3-线程的死亡状态" class="headerlink" title="3. 线程的死亡状态"></a>3. 线程的死亡状态</h2><pre><code>当线程调用stop()方法或run()方法执行完毕后，或者线程抛出一个未捕获的异常（Exception）、错误（Error），线程就进入死亡状态。
+一旦线程进入死亡状态，线程将不再拥有运行的资格，也不能在转换到其他状态。</code></pre><h2 id="4-线程的调度"><a href="#4-线程的调度" class="headerlink" title="4. 线程的调度"></a>4. 线程的调度</h2><pre><code>  程序中多个线程时并发执行的，某个线程若想被执行必须要得到COU的使用权。Java虚拟机会按照特定的机制为程序中的
+每个线程分配CPU的使用权，这种机制被称作线程的调度。
+  线程调度有两种调度模型，分别是分时调度模型和抢占式调度模型。
+  所谓的分时调度模型是指让所有线程轮流获得CPU的使用权，并且平均分配每个线程占用的CPU时间片。
+  抢占式调度模型是指让可运行池中优先级高的线程优先占用CPU，而对于优先级相同的线程，随机选择一个线程使其占用CPU，当它失去了CPU的
+使用权后，在随机选择其他线程获取CPU的使用权。
+  Java虚拟机默认采用抢占式调度模型。</code></pre><p>#<br>      ⑴ 线程的优先级用1~10的整数来表示，数字越大优先级越高。Thread类提供三个静态常量来表示线程的优先级，分别为:<br>              static int MAX_PRIORITY                线程最高优先级，值为10<br>              static int MIN_PRIORITY                线程最低优先级，值为1<br>              static int NORM_PRIORITY            线程普通优先级，值为5<br>      可以通过Thread类的setPriority(int newPriority)方法设置线程优先级。<br>      ⑵ 线程休眠，使用Thread类的静态方法sleep(long milis)可以时线程休眠指定时间，进入休眠等待状态。<br>      ⑶ 线程让步，yield()方法和sleep()类似，都可以让当前线程停止，只是yield()不会阻塞该线程，它只是将线程转换成就绪状态，<br>           让系统的调度器重新调度一次。当某个线程执行yield()方法之后，只有与当前线程优先级相同或者更高的线程才能获得执行的机会。<br>      ⑷ 线程插队 join()方法可实现线程插队，只有当插队的线程执行完毕之后才会继续执行被插队线程。</p>
+<h2 id="5-多线程同步"><a href="#5-多线程同步" class="headerlink" title="5. 多线程同步"></a>5. 多线程同步</h2><pre><code>  当多个线程访问同一个资源时，会引发一些安全问题。为了解决这样的问题，则需要实现多线程同步，即限制某个资源在同一时刻只能被一个线程访问。
+（1）线程安全问题
+    synchronized锁：作用在方法和代码块，wait()用于阻塞线程，notify()、notifyAll()用于唤醒线程。
+    Lock锁：与synchronized相比，Lock属于接口，常用Lock的实现类java.util.concurrent.locks.ReentrantLock，Lock锁需要手动开启和关闭，
+            为保证锁的正确释放，通常使用try{...}catch(e){...}finally{lock.unLock()}保证锁的释放。而这种方式也有相对应的阻塞和唤醒方法，
+            Lock包下有一个专门的类Condition，它的await()和wait()作用相同，signal()、signalAll()对应notify()和notifyAll()。</code></pre>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/15/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/07/%E5%81%B6%E5%BE%97/" class="archive-article-date">
-  	<time datetime="2019-11-07T06:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/11/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          设计模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/07/%E5%81%B6%E5%BE%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">偶得</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/%E5%81%B6%E5%BE%97/">偶得</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2019-11-06T13:42:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/java-IO/" class="archive-article-date">
-  	<time datetime="2019-11-06T01:52:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/java-IO/">java IO</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/04/win10%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:16:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/04/win10%E5%BF%AB%E6%8D%B7%E9%94%AE/">win10快捷键</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/04/Java%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2019-11-04T05:20:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/04/Java%E9%9B%86%E5%90%88/">Java集合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/java/" class="archive-article-date">
-  	<time datetime="2019-11-03T01:22:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/java/">java</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-02T09:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/02/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-02T09:43:36.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -457,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
